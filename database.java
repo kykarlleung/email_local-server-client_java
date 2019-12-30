@@ -17,13 +17,8 @@ public class database {
 	final static String url = "jdbc:mysql://:3306/email?useSSL=false";
 	private static PreparedStatement delete, stmt, update;
 	private static ResultSet rs;
-	//WHAT DO YOU THINK OF THE FOLLOWING IDEA GUYS! I THINK IT MIGHT HELP SPEED UP
-	//MAY CONSIDER STORING THE database.connect() IN A VARAIBLE AND THEN CLOSING THAT VARIABLE
-	//DOING database.Connect().close MIGHT CONNECT AGAIN (2nd time) FOR NO REASON JUST TO CLOSE IT
 	
 	public static Connection Connect(){
-		/*all mySQL url for java require the format jdbc:mysql://
-		followed by the host(IP assigned to database):port(3306)/database name*/
 		
 		try {
 				
@@ -36,7 +31,7 @@ public class database {
 		}
 
 	}
-	//just to test if I connected
+	//just to test if connected
 	public static LinkedList<String> getAllUser() {
 		String sql = "SELECT * FROM email.users";
 		try {
