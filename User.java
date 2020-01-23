@@ -2,6 +2,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.PreparedStatement;
 public class User {
+//wadwadd
 	
 	private String username;
 	private String password;
